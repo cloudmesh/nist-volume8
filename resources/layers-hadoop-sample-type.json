@@ -1,0 +1,61 @@
+
+requires = {
+    'schema': {
+        'java': {
+            'type': 'dict',
+            'schema': {
+                'version': {
+                    'type': 'string'
+                },
+                'implementation': {
+                    'type': 'string'
+                },
+                'supervisord': {
+                    'type': 'dict',
+                    'schema': {}
+                },
+                'zookeeper': {
+                    'type': 'dict',
+                    'schema': {}
+                }
+            }
+        }
+    }
+}
+
+deployers = {
+    'schema': {
+        'ansible': {
+            'type': 'string'
+        }
+    }
+}
+
+parameters = {
+    'schema': {
+        'use_hdfs': {
+            'type': 'boolean'
+        },
+        'use_yarn': {
+            'type': 'boolean'
+        },
+        'num_journalnodes': {
+            'type': 'integer'
+        },
+        'num_namenodes': {
+            'type': 'integer'
+        },
+        'num_datanodes': {
+            'type': 'integer'
+        },
+        'num_resourcemanagers': {
+            'type': 'integer'
+        },
+        'num_historyservers': {
+            'type': 'integer'
+        }
+    }
+}
+
+
+

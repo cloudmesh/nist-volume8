@@ -1,0 +1,22 @@
+{
+    "requires": {
+        "java": {"version": "1.8", "implementation": "OpenJDK",
+                 "supervisord": {},
+                 "zookeeper" : {}
+                }
+    },
+
+    "deployers": {
+        "ansible": "git://github.com/cloudmesh_roles/hadoop"
+    },
+
+    "parameters": {
+        "use_hdfs": true,
+        "use_yarn": false,
+        "num_journalnodes": 1,
+        "num_namenodes": 1,
+        "num_datanodes": 1,
+        "num_resourcemanagers": 1,
+        "num_historyservers": 1
+    }
+}
