@@ -1,0 +1,30 @@
+
+cluster = {
+    'schema': {
+        'name': {
+            'type': 'string'
+        }
+    }
+}
+
+provider = {
+    'schema': {
+        'name': {
+            'type': 'string'
+        }
+    }
+}
+
+stack = {
+    'schema': {
+        'layers': {
+            'type': 'list',
+            'schema': {
+                'type': 'string'
+            }
+        }
+    }
+}
+
+
+

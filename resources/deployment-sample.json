@@ -1,0 +1,5 @@
+{
+    "cluster": {"name": "myCluster"},
+    "provider": {"name": "aws"},
+    "stack": { "layers": ["hadoop", "spark", "postgresql"]}
+}

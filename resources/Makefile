@@ -1,5 +1,5 @@
 
-OBJECTS = virtual-cluster-sample layers-hadoop-sample
+OBJECTS = virtual-cluster-sample layers-hadoop-sample deployment-sample
 
 all: $(OBJECTS)
 
