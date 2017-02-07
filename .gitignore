@@ -93,6 +93,9 @@ ENV/
 *.bbl
 *.blg
 *.out
+*.fls
+*.tdo
+*.fdb_latexmk
 
 evegenie
 resources/*.py
