@@ -961,20 +961,10 @@ Type
 
 \section{API Endpoints}
 
+\subsection{Virtual Cluster}
+
 \begin{verbatim}
 
-definitions:
-  Entity: TBD
-  Cluster: TBD
-  Stack: TBD
-  Deployment: TBD
-  Hpc: TBD
-  Linkage: TBD
-
-paths:
-
-  ################################################################
-  # cluster
 
   /cluster:
     description: This endpoint provides methods for operating on the full set of Clusters.
@@ -1021,9 +1011,11 @@ paths:
       responses: [200, 404]
       result: string, the inventory
 
-  ################################################################
-  # stack
+\end{verbatim}
 
+\subsection{Layers}
+
+\begin{verbatim}
   /stack:
     get: List available stacks
     post: Create a new composition
@@ -1034,23 +1026,10 @@ paths:
     put: Replace a composition
     patch: Modify a composition. Primarily intended to add/remove/modify layers
     delete: Delete a composition
+\end{verbatim}
 
-  ################################################################
-  # linkages
-
-  /link:
-    get: List defined linkages
-    post: Create a new link
-    delete: Delete all linkages
-
-  /link/{id}:
-    get: Retrieve a linkage
-    put: Replace a linkage
-    delete: Delete a linkage
-
-  ################################################################
-  # deployments
-
+\subsection{Deployments}
+\begin{verbatim}
   /deploy:
     get: List current stack deployments
     post: Create a new deployments
@@ -1063,22 +1042,6 @@ paths:
 
   /deploy/{id}/status:
     get: Retrive the status of a deployment
-
-  ################################################################
-  # hpc
-
-  /hpc:
-    get: List all HPC jobs
-    post: Create a new HPC job
-    delete: Delete all HPC jobs
-
-  /hpc/{id}:
-    get: Retrieve a HPC job
-    put: Replace a job
-    delete: Delete a job
-
-  /hpc/{id}/status:
-    get: Retrieve the status of a job
 \end{verbatim}
 
 
