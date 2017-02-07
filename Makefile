@@ -1,6 +1,6 @@
 FILE=nist-volume-8
 
-all:
+all: json
 	pdflatex ${FILE}
 	bibtex ${FILE}
 	pdflatex ${FILE}
@@ -28,4 +28,7 @@ genie:
 	git clone https://github.com/drud/evegenie.git
 	cd evegenie; pip install -r requirements.txt
 json:
-	cd resources; python evegenie/geneve.py virtual-cluster-sample.json
+	cd resources; python ../evegenie/geneve.py virtual-cluster-sample.json
+	cd resources; sed '/eve/q'  virtual-cluster-sample.settings.py | fgrep -v "eve_" > virtual-cluster-sample-type.json
+
+columns=fullflexiblesed '/PATTERN/q' FILE
